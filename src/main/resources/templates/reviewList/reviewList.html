@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한 줄 리뷰</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reviewList.css">
+</head>
+<body>
+    <h1 class="spacer">한 줄 리뷰</h1>
+    <hr>
+    <div class="container"> <!-- rating-group과 세로선을 가로로 배치 -->
+        <div class="rating-group"> <!-- '4.3'과 별 이미지를 그룹으로 묶음 -->
+            <div class="rating">4.3</div> <!-- '4.3'을 출력하는 부분 추가 -->
+            <div class="stars">
+                <img src="image/fStar.png" alt="노란색 별">
+                <img src="image/fStar.png" alt="노란색 별">
+                <img src="image/fStar.png" alt="노란색 별">
+                <img src="image/fStar.png" alt="노란색 별">
+                <img src="image/eStar.png" alt="회색 별"> <!-- 마지막 별은 회색 -->
+            </div>
+        </div>
+        <div class="vertical-line"></div> <!-- 세로선 추가 -->
+        <div class="gauge"> <!-- 게이지 추가 -->
+          <div class="gauge-row">
+              <div class="gauge-label">5점</div>
+              <div class="gauge-bar">
+                  <div class="gauge-fill" style="width: 60%;"></div> <!-- 5점 게이지 -->
+              </div>
+          </div>
+          <div class="gauge-row">
+              <div class="gauge-label">4점</div>
+              <div class="gauge-bar">
+                  <div class="gauge-fill" style="width: 80%;"></div> <!-- 4점 게이지 -->
+              </div>
+          </div>
+          <div class="gauge-row">
+              <div class="gauge-label">3점</div>
+              <div class="gauge-bar">
+                  <div class="gauge-fill" style="width: 40%;"></div> <!-- 3점 게이지 -->
+              </div>
+          </div>
+          <div class="gauge-row">
+              <div class="gauge-label">2점</div>
+              <div class="gauge-bar">
+                  <div class="gauge-fill" style="width: 20%;"></div> <!-- 2점 게이지 -->
+              </div>
+          </div>
+          <div class="gauge-row">
+              <div class="gauge-label">1점</div>
+              <div class="gauge-bar">
+                  <div class="gauge-fill" style="width: 10%;"></div> <!-- 1점 게이지 -->
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
