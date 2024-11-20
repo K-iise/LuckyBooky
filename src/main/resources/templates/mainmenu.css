@@ -1,0 +1,50 @@
+
+.main-menu-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0 20px; /* 좌우 여백 추가 */
+    width: 100%; /* 전체 화면 너비 사용 */
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+}
+
+.menu-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-button {
+    width: 85px;
+    height: 85px;
+}
+
+/* 라벨 스타일 */
+.main-menu-label {
+    margin-left: 58px; /* 라벨 간의 간격 */
+    font-size: 30px;    /* 라벨 글씨 크기 */
+    cursor: pointer;  /* 라벨을 클릭할 수 있도록 커서를 손가락 모양으로 변경 */
+}
+
+.menu-right {
+    display: flex; /* 내부 요소를 가로로 나열 */
+    align-items: center; /* 수직 중앙 정렬 */
+    gap: 20px; /* 알람 버튼과 로그아웃 버튼 간 간격 */
+
+}
+
+.alarm-button {
+    width: 25px;  /* 알람 아이콘의 가로 크기 */
+    height: 30px;  /* 비율에 맞게 세로 크기 자동 조정 */
+}
+
+.logout-button {
+    width: 88px;  
+    height: 40px;  
+}
+
+.divider {
+    width: 100%; /* 전체 화면 너비 */
+    height: 1px; /* 줄 두께 */
+    background-color: #000000; /* 줄 색상 */
+    margin-top: 5px; /* 메뉴와 줄 사이 간격 */
+}

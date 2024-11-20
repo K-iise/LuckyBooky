@@ -1,0 +1,39 @@
+
+
+.profile-container {
+    display: flex;
+    align-items: center; /* 원과 라벨을 수직 중앙 정렬 */
+    gap: 20px; /* 원과 라벨 간 간격 */
+    margin-top: 80px; /* 상단 간격 */
+    float: left; /* 오른쪽 정렬 */
+    margin-left: 80px; /* 오른쪽에서 50px 떨어짐 */
+}
+
+.profile-image {
+    width: 78px; /* 원의 가로 크기 */
+    height: 78px; /* 원의 세로 크기 */
+    background-color: #aaa;
+    background-size: cover; /* 사진을 원 크기에 맞게 채움 */
+    background-position: center; /* 사진을 중앙에 정렬 */
+    background-repeat: no-repeat; /* 사진 반복 방지 */
+    border-radius: 50%; /* 원 형태 */
+    position: relative; /* 기본 문맥에 따라 위치 */
+}
+
+.name-follow-container {
+    display: flex;
+    flex-direction: column; /* 라벨을 위아래로 배치 */
+    justify-content: space-between; /* 라벨 간 공간 균등 배치 */
+    height: 78px; /* 라벨 컨테이너 높이 (조정 가능) */
+    margin-bottom: 10px;
+}
+
+.wname {
+    font-size: 35px; /* 라벨 글씨 크기 */
+    color: #000000; /* 글씨 색상 */
+}
+
+.follow {
+    font-size: 15px; /* 라벨 글씨 크기 */
+    color: #8f8f8f; /* 글씨 색상 */
+}
