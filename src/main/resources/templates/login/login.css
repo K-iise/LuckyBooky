@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    width: 90%; /* 화면 너비의 90%를 차지하도록 설정 */
+    max-width: 1300px; /* 최대 너비를 더 크게 설정 */
+    height: 900px; 
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow:hidden;
+}
+.image-section {
+    flex: 2;
+}
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.back-button {
+    position: absolute;
+    top: 50px; /* 상단에서 Npx 떨어짐 */
+    right: 230px; /* 오른쪽에서 Npx 떨어짐 */
+    width: 60px; /* 버튼 크기 */
+    height: 60px;
+    cursor: pointer;
+}
+.form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ffffff;
+}
+.form-section h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.form-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.form-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fcd303;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form-section button:hover {
+    background-color: #e5b902;
+}
+.form-section a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+    text-decoration: none;
+}
+.form-section a:hover {
+    text-decoration: underline;
+}
