@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Inter', sans-serif; /* 폰트 적용 */
+}
+h1 {
+    font-size: 18pt;
+    margin: 10; /* 여백을 없애서 선과 붙게 함 */
+}
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #BABABA;
+    margin-top: 0px; /* 선과의 간격을 조정 */
+}
+.container {
+    display: flex; /* rating-group과 세로선을 가로로 배치 */
+    align-items: flex-start; /* 시작 부분 정렬 */
+    margin-top: 20px; /* 전체 컨테이너와의 간격 조정 */
+}
+.rating-group {
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    margin-right: 70px; /* 세로선과의 간격 조정 */
+    height: 100px; /* 높이 조정 */
+}
+.rating {
+    font-size: 28pt; /* 글자 크기를 28pt로 설정 */
+    font-weight: bold;
+}
+.stars {
+    display: flex; /* 별 이미지들을 가로로 나열 */
+    margin-top: 5px; /* '4.3'과의 간격 조정 */
+}
+.stars img {
+    width: 25px; /* 별 이미지의 크기 조정 */
+    height: 25px; /* 별 이미지의 크기 조정 */
+    margin: 0 2px; /* 별 이미지 간의 간격 조정 */
+}
+.spacer {
+    margin-bottom: 0px; /* 아래로 내리기 위해 여백 추가 */
+}
+.vertical-line {
+    width: 1px; /* 세로선의 너비 */
+    height: 70px; /* 세로선의 높이 */
+    background-color: #BABABA; /* 세로선 색상 */
+    margin-right: 50px; /* 게이지와의 간격 */
+    align-self: center; /* 중앙 정렬 */
+}
+.gauge {
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+    height: 100px; /* 높이 조정 */
+}
+.gauge-row {
+    display: flex;
+    align-items: center; /* 중앙 정렬 */
+    margin: 0px; /* 각 행 간의 간격 일정하게 조정 */
+}
+.gauge-label {
+    width: 50px; /* 점수 라벨의 고정 너비 */
+    font-size: 10pt;
+    text-align: right; /* 오른쪽 정렬 */
+    margin-right: 10px; /* 게이지 바와의 간격 */
+}
+.gauge-bar {
+    width: 130px; /* 게이지 바의 길이 */
+    height: 6px; /* 게이지 바의 높이 */
+    background-color: #e0e0e0; /* 회색 배경 */
+    position: relative; /* 절대 위치 설정을 위해 필요 */
+    border-radius: 5px; /* 끝부분 둥글게 */
+}
+.gauge-fill {
+    height: 100%; /* 높이는 게이지 바와 같음 */
+    background-color: #000; /* 검은색으로 채움 */
+    position: absolute; /* 절대 위치 설정 */
+    border-radius: 5px; /* 끝부분 둥글게 */
+}
+.box {
+    width: 589px; /* 상자의 너비 */
+    height: 136px; /* 상자의 높이 */
+    background-color: #fff; /* 상자 안쪽 색상 흰색 */
+    border: 1px solid #DFDDDD; /* 테두리 색상 */
+    border-radius: 15px; /* 둥근 모서리 */
+    margin-top: 20px; /* 상자와 위 요소 간의 간격 */
+    display: flex; /* 내부 요소 정렬을 위해 flex 사용 */
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+}
+.stars2 {
+    display: flex; /* 별 이미지들을 가로로 나열 */
+}
+.stars2 img {
+    width: 40px; /* 별 이미지의 크기 조정 (높이와 너비 증가) */
+    height: 38px; /* 별 이미지의 크기 조정 */
+    margin: 0px; /* 별 이미지 간의 간격 조정 */
+}
+.box .stars2 {
+    margin-bottom: 10px; /* 별 이미지와 텍스트 간의 간격 */
+}
+.box .scoretext {
+    color: #7B7676;
+}
+.total-container {
+    display: flex; /* 가로로 배치 */
+    justify-content: space-between; /* 사이 간격을 균일하게 */
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 589px; /* 상자 너비와 동일 */
+    margin-top: 10px; /* 요소 간격 조정 */
+}
+.total-count {
+    font-weight: bold; /* 굵은 글씨 */
+}
+.sort-option {
+    font-size: 13px;
+    display: flex; /* 배치 방식 설정 */
+    align-items: center; /* 중앙 정렬 */
+    color: #7B7676;
+}
+.sort-option img {
+    width: 12px; /* 화살표 이미지 크기 조정 */
+    height: 13px; /* 화살표 이미지 크기 조정 */
+    margin-left: 3px; /* 텍스트와 간격 조정 */
+}
