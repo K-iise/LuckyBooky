@@ -2,18 +2,25 @@ package Dita.Library.Controller;
 
 import Dita.Library.DTO.LoginDto;
 import Dita.Library.Service.UsersService;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.logging.Logger;
+
 @Controller
 @RequestMapping("/login")
 public class UsersController {
 
-    @Autowired
-    private UsersService usersService;
+    private final UsersService usersService;
 
+
+    @Autowired
+    public UsersController(UsersService usersService){
+        this.usersService = usersService;
+    }
     @GetMapping
     public String showLoginPage() {
         return "login"; // 로그인 화면 반환
@@ -31,8 +38,8 @@ public class UsersController {
 
         // 3. 결과 처리
         if (isValid) {
-            // 로그인 성공 -> 메인 페이지로 리다이렉트
-            return "redirect:login/registerUI";
+            // 로그인 성공 -> 메인 페이지로 리다이렉트(이지만 지금은 회원가입)
+            return "redirect:registerUI.html";
         } else {
             // 로그인 실패 -> 에러 메시지와 함께 로그인 페이지로 이동
             model.addAttribute("error", "아이디 또는 비밀번호가 잘못되었습니다.");

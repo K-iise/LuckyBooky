@@ -23,17 +23,22 @@
         <div class="image-section">
             <img src="../image/login.png" alt="로그인이미지">
         </div>
-        <!-- 오른쪽 폼 섹션 -->
 
-            <div class="form-section">
-                <form name="inputForm" method="POST" action="/login/logindo">
+        <!-- 오른쪽 폼 섹션 -->
+        <div class="form-section">
+            <form name="inputForm" method="POST" action="/login/logindo">
                 <input type="text" placeholder="아이디 입력" name="user_id" id="user_id">
                 <input type="password" placeholder="비밀번호 입력" name="password" id="password">
+
+                <div th:if="${error}" style="color: red;">
+                    <p th:text="${error}"></p>
+                </div>
                 <button>로그인</button>
                 <a href="#">회원가입</a>
-                </form>
-            </div>
+            </form>
 
+
+        </div>
     </div>
 </body>
 </html>

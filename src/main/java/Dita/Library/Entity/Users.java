@@ -15,11 +15,12 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long user_no;
 
-    @Column(name = "user_id") // 데이터베이스 컬럼 이름을 명시적으로 설정
-    private String user_id;
+    @Column(name = "user_id")  // 데이터베이스 컬럼명: user_id
+    private String userId;      // 자바 필드명: userId
 
     private String username;
 
+    @Column(name = "password")
     private String password;
 
     private String nickname;

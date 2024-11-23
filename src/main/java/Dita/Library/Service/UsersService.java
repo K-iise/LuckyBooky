@@ -11,8 +11,12 @@ import java.util.Optional;
 @Service
 public class UsersService {
 
+    private final UsersRepository usersRepository;
+
     @Autowired
-    private UsersRepository usersRepository;
+    public UsersService(UsersRepository usersRepository) {
+        this.usersRepository = usersRepository;
+    }
 
     /**
      * 로그인
