@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 화면</title>
+    <script>
+        // 페이지 로드 시 alertMessage가 있으면 alert 실행
+        document.addEventListener('DOMContentLoaded', function () {
+            const alertMessage = /*[[${alertMessage}]]*/ '';
+            if (alertMessage) {
+                alert(alertMessage);
+            }
+        });
+    </script>
+
     <!-- 외부 CSS 파일 연결 -->
     <link rel="stylesheet" href="login.css">
 </head>
@@ -13,12 +23,21 @@
         <div class="image-section">
             <img src="../image/login.png" alt="로그인이미지">
         </div>
+
         <!-- 오른쪽 폼 섹션 -->
         <div class="form-section">
-            <input type="text" placeholder="아이디 입력">
-            <input type="password" placeholder="비밀번호 입력">
-            <button>로그인</button>
-            <a href="#">회원가입</a>
+            <form name="inputForm" method="POST" action="/login/logindo">
+                <input type="text" placeholder="아이디 입력" name="user_id" id="user_id">
+                <input type="password" placeholder="비밀번호 입력" name="password" id="password">
+
+                <div th:if="${error}" style="color: red;">
+                    <p th:text="${error}"></p>
+                </div>
+                <button>로그인</button>
+                <a href="#">회원가입</a>
+            </form>
+
+
         </div>
     </div>
 </body>
