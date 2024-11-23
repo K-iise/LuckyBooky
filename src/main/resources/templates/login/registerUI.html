@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +15,17 @@
         <!-- 오른쪽 폼 섹션 -->
         <div class="form-section">
             <img src="../image/뒤로가기 버튼.png" alt="뒤로가기 버튼" class="back-button">
-            <form>
-                <input type="text" placeholder="이름 입력">
-                <input type="text" placeholder="전화번호 입력">
-                <input type="text" placeholder="주민번호 입력">
-                <input type="text" placeholder="아이디 입력">
-                <input type="password" placeholder="비밀번호 입력">
-                <input type="password" placeholder="비밀번호 재입력">
-                <input type="text" placeholder="필명 입력">
+            <form name="inputForm" method="POST" action="/login/signup">
+                <input type="text" placeholder="이름 입력" name="username" th:value="${signupDto.username}">
+                <input type="text" placeholder="전화번호 입력" name="phoneNumber" th:value="${signupDto.phoneNumber}">
+                <input type="text" placeholder="주민번호 입력" name="residentNumber" th:value="${signupDto.residentNumber}">
+                <input type="text" placeholder="아이디 입력" name="userId" th:value="${signupDto.userId}">
+                <input type="password" placeholder="비밀번호 입력" name="password" th:value="${signupDto.password}">
+                <input type="password" placeholder="비밀번호 재입력" name="passwordchk" th:value="${signupDto.passwordchk}">
+                <input type="text" placeholder="필명 입력" name="nickname" th:value="${signupDto.nickname}">
+                <div th:if="${error}" style="color: red;">
+                    <p th:text="${error}"></p>
+                </div>
                 <button type="submit">회원 가입</button>
             </form>
         </div>

@@ -8,5 +8,8 @@ import java.util.Optional;
 
 @Repository
 public interface UsersRepository extends JpaRepository<Users, Long> {
-    Optional<Users> findByUserIdAndPassword(String userId, String password);  // 메소드명 수정
+
+    Optional<Users> findByUserIdAndPassword(String userId, String password);
+
+    Optional<Users> findByUserId(String userId);
 }
