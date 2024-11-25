@@ -1,4 +1,10 @@
-
+.up-menu-container {
+    display: flex;
+    justify-content: space-between; /* 양쪽 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    width: 100%;
+    padding: 10px; /* 상하좌우 여백 */
+}
 
 .profile-container {
     display: flex;
@@ -37,3 +43,125 @@
     font-size: 15px; /* 라벨 글씨 크기 */
     color: #8f8f8f; /* 글씨 색상 */
 }
+
+.fid-profile-container {
+    display: flex;
+    gap: 20px; /* 버튼 간 간격 */
+    align-items: center;
+    float: right;
+    margin-right: 80px;
+    margin-top: 50px;
+}
+
+.best-book-container {
+    display: flex;
+    justify-content: space-between; /* 양쪽 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    width: 100%;
+    margin-top: 80px;
+    padding: 10px; /* 상하좌우 여백 */
+}
+
+.best-book-data {
+    display: flex;
+    padding: 15px; /* 내부 여백 */
+    margin: 0 auto; /* 중앙 정렬 */
+    gap: 40px; /* 이미지와 텍스트 간 간격 */
+}
+
+.best-book-image img {
+    width: 200px; /* 이미지 너비 */
+    height: 290px; /* 이미지 높이 */
+    object-fit: cover; /* 이미지 비율 유지하며 박스에 맞춤 */
+}
+
+.name-writer-container {
+    display: flex;
+    flex-direction: column; /* 라벨을 위아래로 배치 */
+    margin-top: 30px;
+    gap: 40px;
+}
+
+
+.best-book-mention {
+    position: relative; /* 편집 버튼 위치를 조정하기 위한 기준 */
+    padding: 10px; /* 박스 내부 여백 */
+    max-width: 600px; /* 전체 컨테이너 너비 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+.remake-button {
+    position: absolute;
+    top: 10px; /* 박스 상단에서 간격 */
+    right: 10px; /* 박스 오른쪽에서 간격 */
+    width: 62px; /* 버튼 크기 */
+    height: 30px;
+    cursor: pointer;
+}
+
+.ment-contatiner {
+    background-color: #f5f5f5; /* 회색 배경 */
+    padding: 20px; /* 내부 여백 */
+    margin-top: 40px; /* 버튼과 멘트 간 간격 */
+    width: 570px; /* 고정된 너비 */
+    height: 250px; /* 고정된 높이 */
+    overflow: hidden; /* 텍스트가 넘칠 경우 숨김 */
+    text-overflow: ellipsis; /* 넘치는 텍스트 처리 (말줄임표) */
+    display: flex; /* 플렉스 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: flex-start; /* 세로 상단 정렬 */
+}
+
+.ment {
+    font-size: 24px; /* 멘트 글씨 크기 */
+    color: #333; /* 글씨 색상 */
+    line-height: 1.6; /* 줄 간격 */
+    word-break: break-word; /* 텍스트 줄바꿈 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    margin-top: 10-px; /* 위쪽 간격 추가 */
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start; /* 오른쪽 정렬 */
+    padding: 40px 100px; /* 상하좌우 여백 */
+}
+
+ul {
+    list-style: none; /* 기본 리스트 스타일 없애기 */
+    display: flex;
+    gap: 20px; /* 항목 간 간격 */
+}
+
+ul li {
+    display: inline; /* li를 inline 요소로 설정하여 가로로 나열 */
+}
+
+ul li a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: #333; /* 글씨 색상 */
+    font-size: 24px; /* 글씨 크기 */
+    padding: 8px 15px; /* 링크에 여백 추가 */
+    border-radius: 4px; /* 버튼 모서리 둥글게 */
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+ul li a.currentPage {
+    font-weight: bold; /* 굵은 글씨 */
+    text-decoration: underline; /* 밑줄 */
+    text-decoration-style: solid; /* 밑줄 끝을 둥글게 하지 않음 */
+    text-underline-offset: 13px; /* 밑줄과 글자 간격 조정 */
+}
+
+
+
+/* iframe으로 페이지 내용 삽입 */
+.content {
+    margin-top: 80px; /* 상단 고정 헤더 높이만큼 여백을 줌 */
+    width: 100%;
+    height: calc(100vh - 80px); /* 화면 높이에서 상단 헤더 높이를 뺀 값으로 iframe 크기 설정 */
+    border: none; /* iframe 테두리 제거 */
+}
+

@@ -9,43 +9,114 @@
     <link rel="stylesheet" href="../mainmenu.css">
     
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll("nav a"); // 모든 링크 선택
+        
+        links.forEach(function(link) {
+            link.addEventListener("click", function(event) {
+                // 기존에 활성화된 항목에서 currentPage 클래스 제거
+                links.forEach(function(link) {
+                    link.classList.remove("currentPage");
+                });
+
+                // 클릭된 링크에 currentPage 클래스 추가
+                event.target.classList.add("currentPage");
+            });
+        });
+    });
+</script>
 <body>
-    <div class="main-menu-container">
-        <div class="menu-left">
-            <a href="">
-                <img src="../image/로고.png" alt="로고 버튼" class="logo-button">
-            </a>
-            <label class="main-menu-label" onclick="window.location.href=''">홈</label>
-            <label class="main-menu-label" onclick="window.location.href=''">피드</label>
-            <label class="main-menu-label" onclick="window.location.href=''">검색</label>
-            <label class="main-menu-label" onclick="window.location.href=''">내서재</label>
-        </div>
-        <div class="menu-right">
-            <a href="">
-                <img src="../image/알람 아이콘.png" alt="알람 버튼" class="alarm-button">
-            </a>
+    <div class="header">
+        <div class="main-menu-container">
+            <div class="menu-left">
+                <a href="">
+                    <img src="../image/로고.png" alt="로고 버튼" class="logo-button">
+                </a>
+                <label class="main-menu-label" onclick="window.location.href=''">홈</label>
+                <label class="main-menu-label" onclick="window.location.href=''">피드</label>
+                <label class="main-menu-label" onclick="window.location.href=''">검색</label>
+                <label class="main-menu-label" onclick="window.location.href=''">내서재</label>
+            </div>
+            <div class="menu-right">
+                <a href="">
+                    <img src="../image/알람 아이콘.png" alt="알람 버튼" class="alarm-button">
+                </a>
 
-            <a href="">
-                <img src="../image/로그아웃버튼.png" alt="로그아웃 버튼" class="logout-button">
-            </a>
+                <a href="">
+                    <img src="../image/로그아웃버튼.png" alt="로그아웃 버튼" class="logout-button">
+                </a>
+
+            </div>
+    
+        </div>
+
+        <div class="divider"></div>
+        <div class="up-menu-container">
+
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="../image/프로필 사진.png">
+                </div>
+                <div class="name-follow-container">
+                    <label class="wname">홍길동의 서재</label>
+                    <label class="follow">팔로잉+ 팔로워+</label>
+                </div>
+            </div>  
+
+            <div class="fid-profile-container">
+                <a href="">
+                    <img src="../image/피드 작성 버튼.png" alt="피드 작성 버튼" class="create-fid-button">
+                </a>
+                <a href="">
+                    <img src="../image/프로필 편집 버튼.png" alt="프로필 편집 버튼" class="profile-button">
+                </a>
+            </div>
 
         </div>
- 
+
+        <div class="best-book-container">
+            
+            <div class="best-book-data">
+                <div class="best-book-image">
+                    <img src="../image/인생책 사진.png">
+                </div>
+                <div class="name-writer-container">
+                    <label class="wname">호감의 시작</label>
+                    <label class="follow">최영선(희렌최)</label>
+                </div>
+            </div>
+
+            <div class="best-book-mention">
+                <div>
+                    <a href="">
+                        <img src="../image/편집 버튼.png" alt="편집 버튼" class="remake-button">
+                    </a>
+                </div>
+                <div class="ment-contatiner">
+                    <label class="ment">“너무 유익했어요 인생에 너무 도움됩니다.
+                        아아아아아앙아아아아아”</label>
+                </div>
+            </div>
+
+
+            
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="sogae/sogae.html" target="content-frame" class="currentPage">소개</a></li>
+                <li><a href="jundo/jundo.html" target="content-frame">전체 도서</a></li>
+                <li><a href="chaekjang/chaekjang.html" target="content-frame">책장</a></li>
+                <li><a href="dokno/dokno.html" target="content-frame">독서노트</a></li>
+                <li><a href="tonggye/tonggye.html" target="content-frame">통계</a></li>
+            </ul>
+        </nav>
+
     </div>
 
-    <div class="divider"></div>
-    <div class="up-menu-container">
-        <div class="profile-container">
-            <div class="profile-image">
-                <img src="../image/프로필 사진.png">
-            </div>
-            <div class="name-follow-container">
-                <label class="wname">홍길동의 서재</label>
-                <label class="follow">팔로잉+ 팔로워+</label>
-            </div>
+    <iframe name="content-frame" class="content" src="sogae.html"></iframe>
 
-        </div>
-    </div>
     
 </body>
 </html>
