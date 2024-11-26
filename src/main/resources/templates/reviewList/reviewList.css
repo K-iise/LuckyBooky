@@ -118,10 +118,12 @@ hr {
     font-weight: bold; /* 굵은 글씨 */
 }
 .sort-option {
+    position: relative; /* 부모 요소를 기준으로 자식 요소의 위치를 설정 */
     font-size: 13px;
-    display: flex; /* 배치 방식 설정 */
+    display: inline-flex;
     align-items: center; /* 중앙 정렬 */
     color: #7B7676;
+    cursor: pointer;
 }
 .sort-option img {
     width: 12px; /* 화살표 이미지 크기 조정 */
@@ -181,4 +183,35 @@ hr {
 }
 .like-count {
     font-size: 12px;
+}
+.dropdown-menu {
+    position: absolute; /* 부모 요소 기준으로 위치 설정 */
+    top: 100%; /* 부모 요소 바로 아래 */
+    left: 0; /* 부모 요소 왼쪽에 맞춤 */
+    background-color: white; /* 배경색 */
+    border: 1px solid #dfdddd; /* 테두리 색상 */
+    border-radius: 5px; /* 모서리를 둥글게 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 드롭다운 그림자 */
+    width: max-content; /* 메뉴 항목의 크기에 맞춤 */
+    display: none; /* 기본적으로 숨김 */
+    z-index: 1000; /* 다른 요소 위에 표시 */
+}
+
+.dropdown-menu.visible {
+    display: block; /* 보이게 설정 */
+}
+
+.dropdown-menu.hidden {
+    display: none; /* 숨김 */
+}
+
+.menu-item {
+    padding: 8px 12px; /* 메뉴 항목의 여백 */
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #f0f0f0; /* 항목에 마우스를 올릴 때 색상 변경 */
 }
