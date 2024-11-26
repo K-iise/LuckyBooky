@@ -69,9 +69,15 @@
     </div> <!-- 새로운 상자 추가 -->
     <div class="total-container">
         <div class="total-count">총 1,548개</div> 
-        <div class="sort-option">
+        <div class="sort-option" onclick="toggleMenu()">
             <div>좋아요 순</div>
             <img src="../image/downarrow.png" alt="내려가는 화살표">
+            <div class="dropdown-menu hidden">
+                <div class="menu-item">좋아요순</div>
+                <div class="menu-item">별점 높은순</div>
+                <div class="menu-item">별점 낮은순</div>
+                <div class="menu-item">최신순</div>
+            </div>
         </div>
     </div>
     <div class="comment-section">
@@ -93,5 +99,6 @@
             </div>
         </div>
     </div>
+    <script src="dropdown.js"></script>
 </body>
 </html>
